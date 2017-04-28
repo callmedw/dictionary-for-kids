@@ -20,6 +20,12 @@ describe('#id') do
    end
  end
 
+ describe('.all') do
+     it('returns an empty array') do
+       test_word = Word.new({:term => 'apple', :id => 1})
+       expect(Word.all()).to(eq([]))
+     end
+   end
 
 
 end
