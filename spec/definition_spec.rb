@@ -21,6 +21,13 @@ describe(Definition) do
    end
  end
 
+ describe('.all') do
+     it('returns an empty array') do
+       test_definition = Definition.new({:define => 'a round, red fruit from an apple tree', :id => 1})
+       expect(Definition.all()).to(eq([]))
+     end
+   end
+
 
 
 end
