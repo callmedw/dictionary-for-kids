@@ -35,5 +35,14 @@ describe('#id') do
      end
    end
 
+  describe('.find') do
+    it('finds a term based on an id number') do
+      test_word = Word.new({:term => 'apple', :id=> 1})
+      test_word.add
+      test_word2 = Word.new({:term => 'apple', :id=> 2})
+      test_word2.add
+      expect(Word.find(test_word2.id())).to(eq(test_word2))
+    end
+  end
 
 end

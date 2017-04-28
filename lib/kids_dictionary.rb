@@ -18,4 +18,14 @@ class Word
     @@words.push(self)
   end
 
+  define_singleton_method(:find) do |id_number|
+    found_id = nil
+    @@words.each() do |term|
+      if term.id() == id_number
+        found_id = term
+      end
+    end
+    found_id
+  end
+
 end
