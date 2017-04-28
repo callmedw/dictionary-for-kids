@@ -27,5 +27,13 @@ describe('#id') do
      end
    end
 
+   describe('#add') do
+     it('adds a word and all of its attributes to the words array') do
+       test_word = Word.new({:term => 'apple', :id => 1})
+       test_word.add
+       expect(Word.all()).to(eq([test_word]))
+     end
+   end
+
 
 end

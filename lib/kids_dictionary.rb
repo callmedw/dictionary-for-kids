@@ -14,4 +14,8 @@ class Word
     @@words
   end
 
+  define_method(:add) do
+    @@words.push(self)
+  end
+
 end

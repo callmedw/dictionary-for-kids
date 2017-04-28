@@ -6,4 +6,4 @@ gem "sinatra-contrib"
 gem "rspec"
 gem "capybara"
 gem "pry"
-gem 'ruby-lint', '~> 2.0', '>= 2.0.4'
+gem 'ruby-lint'
