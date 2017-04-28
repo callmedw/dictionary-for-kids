@@ -14,7 +14,7 @@ class Word
   end
 
   define_method(:words) do
-    @definitions  
+    @definitions
   end
 
   define_method(:add) do
@@ -31,7 +31,7 @@ class Word
     found_id
   end
 
-  # define_method(:add_definition) do |meaning|
-  #   @definition.push(meaning)
-  # end
+  define_method(:add_definition) do |meaning|
+    @definitions.push(meaning)
+  end
 end
