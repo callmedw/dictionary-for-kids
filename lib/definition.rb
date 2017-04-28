@@ -14,5 +14,9 @@ class Definition
     @@definitions
   end
 
+  define_method(:add) do
+    @@definitions.push(self)
+  end
+
 
 end
