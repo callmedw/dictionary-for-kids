@@ -1,19 +1,15 @@
-require "kids_dictionary"
-require "rspec"
-require "pry"
+require 'kids_dictionary'
+require 'rspec'
+require 'pry'
+require 'ruby-lint'
 
 
-# example project spec
+describe(Word) do
 
-# describe 'Palindrome#isWord?' do
-#   let(:word) { Palindrome.new }
-
-#   it "returns true if the word has at least one vowel" do
-#     expect(word.is_word?("word")).to eq true
-#   end
-
-#   it "returns false if the word does not have a vowel" do
-#     expect(word.is_word?("wrd")).to eq false
-#   end
-
-# end
+  describe('#term') do
+    it('returns the term') do
+      test_word = Word.new({:term => 'apple'})
+      expect(test_word.term()).to(eq('apple'))
+    end
+  end
+end

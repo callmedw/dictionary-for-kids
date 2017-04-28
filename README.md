@@ -13,7 +13,6 @@ _This application will allow a user to build their own online dictionary, provid
 | User can see a list of all words in the dictionary | "apple" | "apple" |
 | User inputs a definition for a word in the dictionary | "round red fruit from a tree" | "apple - round red fruit from a tree" |
 
-
 ## Installation Requirements
 - [ ] Web browser with ES6 compatibility
 - [ ] Ruby

@@ -1,9 +1,10 @@
-# example ruby code
+require 'ruby-lint'
 
-# class Palindrome
+class Word
+  attr_reader(:term)
 
-#   def is_word?(user_input)
-#     user_input.match?(/[aeiouy]+/i)
-#   end
+  define_method(:initialize) do |attributes|
+    @term = attributes.fetch(:term)
 
-# end
+  end
+end
