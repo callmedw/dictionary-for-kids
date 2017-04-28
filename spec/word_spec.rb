@@ -1,8 +1,6 @@
-require 'kids_dictionary'
+require 'word'
 require 'rspec'
 require 'pry'
-require 'ruby-lint'
-
 
 describe(Word) do
 

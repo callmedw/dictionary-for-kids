@@ -1,5 +1,3 @@
-require 'ruby-lint'
-
 class Word
   attr_reader(:term, :id)
 
@@ -27,5 +25,4 @@ class Word
     end
     found_id
   end
-
 end
