@@ -1,5 +1,3 @@
-require 'ruby-lint'
-
 class Definition
   attr_reader(:define, :id)
 

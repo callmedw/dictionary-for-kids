@@ -2,8 +2,6 @@ require 'word'
 require 'definition'
 require 'rspec'
 require 'pry'
-require 'ruby-lint'
-
 
 describe(Definition) do
 
