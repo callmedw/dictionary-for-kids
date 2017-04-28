@@ -18,5 +18,13 @@ class Definition
     @@definitions.push(self)
   end
 
-
+  define_singleton_method(:find) do |id_number|
+    found_id = nil
+    @@definitions.each() do |definition|
+      if definition.id == id_number
+        found_id = definition
+      end
+    end
+    found_id
+  end
 end
