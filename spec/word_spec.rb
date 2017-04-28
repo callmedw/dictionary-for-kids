@@ -60,8 +60,4 @@ describe(Word) do
       expect(test_word.words()).to(eq([test_definition]))
     end
   end
-
-
-
-
 end

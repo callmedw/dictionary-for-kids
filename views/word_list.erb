@@ -1,0 +1,11 @@
+<h1>Word List</h1>
+
+
+<% @word_list.each do |word| %>
+  <br>
+  <a href='/word_list/<%=word.id%>'><%= word.term %></a>
+<% end %>
+<br>
+<hr>
+
+<a href="/">Back to main page</a>
