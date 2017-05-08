@@ -4,6 +4,9 @@ require 'rspec'
 require 'pry'
 
 describe(Word) do
+  before() do
+    Word.all.clear
+  end
 
   describe('#term') do
     it('returns the term') do

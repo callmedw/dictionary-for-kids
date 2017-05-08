@@ -11,5 +11,14 @@ describe('the homepage to add a word path', {:type => :feature}) do
     expect(page).to have_content('Add a Word')
   end
 
+  describe('the add a word path', {:type => :feature}) do
+    it('takes user input to add a word to the dictionary') do
+      visit('word_list/new')
+      fill_in('word', :with => 'Word')
+      click_button('Add Word')
+      expect(page).to have_content('Success')
+    end
+  end
+
 
 end
