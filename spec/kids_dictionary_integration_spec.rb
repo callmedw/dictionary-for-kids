@@ -20,5 +20,13 @@ describe('the homepage to add a word path', {:type => :feature}) do
     end
   end
 
+  describe('view word list path', {:type => :feature}) do
+    it('can click on a word on the list that links to the defintion of the word') do
+      visit('/word_list')
+      click_link('Word')
+      expect(page).to have_content('Definition:')
+    end
+  end
+
 
 end
