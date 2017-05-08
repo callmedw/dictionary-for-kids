@@ -1,4 +1,5 @@
 # Dictionary for Kids
+https://git.heroku.com/salty-river-23580.git
 #### Kids can build their own dictionary!
 
 #### By Dana Weiss under the watchful eye of EpicodusPDX
@@ -19,7 +20,7 @@ _This application will allow a user to build their own online dictionary, provid
 - [ ] Bundler
 
 ## Setup
-- [ ] Clone this repository (https://github.com/callmedw/dictionary-for-kids.git)
+- [ ] Clone this repository https://github.com/callmedw/dictionary-for-kids.git
 - [ ] Create new branch to make changes to code
 - [ ] Open files in atom or text editor of your choice
 - [ ] Open in a browser of your choice
