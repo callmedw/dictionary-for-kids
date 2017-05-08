@@ -28,5 +28,13 @@ describe('the homepage to add a word path', {:type => :feature}) do
     end
   end
 
+  describe('the add a definition path', {:type => :feature}) do
+    it('takes user input to add a definition to a word in the dictionary') do
+      visit('word_list/1/definition/new')
+      fill_in('definition', :with => 'unit of language')
+      click_button('Add definition')
+      expect(page).to have_content('Success')
+    end
+  end
 
 end
