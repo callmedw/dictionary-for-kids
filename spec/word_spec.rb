@@ -55,7 +55,7 @@ describe(Word) do
   describe('#add_definition') do
     it('adds a definition and all of its attributes to a term') do
       test_word = Word.new({:term => 'apple', :id => 1})
-      test_definition = Definition.new({:define => 'a round, red fruit from an apple tree', :id => 1})
+      test_definition = Definition.new({:definition => 'a round, red fruit from an apple tree', :id => 1})
       test_word.add_definition(test_definition)
       expect(test_word.words()).to(eq([test_definition]))
     end

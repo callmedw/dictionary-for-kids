@@ -6,6 +6,7 @@ require 'pry'
 also_reload('lib/**/*.rb')
 
 get('/') do
+  @words = Word.all
   erb(:index)
 end
 
@@ -19,11 +20,11 @@ get('/word_list') do
 end
 
 post('/word_list') do
-  @word = params.fetch('word')
+  @word = params.fetch("word")
   @new_word = Word.new({:term => @word})
   @new_word.add
   @word_list = Word.all()
-  erb(:success_word)
+  erb(:success)
 end
 
 get('/word_list/:id') do
@@ -33,18 +34,22 @@ get('/word_list/:id') do
   erb(:word)
 end
 
-post('/success_definition') do
-  # @definition = params.fetch('definition')
-  # @new_definition = Definition.new({:define => definition})
-  # @word.add_definition(definition)
-  # @word = Word.find(params.fetch('word_id').to_i())
-  # @word.add_definition(definition)
-  # erb(:success_definition)
+get('/definition') do
+  @word = Word.find(params.fetch('id').to_i)
+  erb(:definition)
+end
+
+post('/definition') do
+  @definition = params.fetch('definition')
+  @new_definition = Definition.new({:definition => @definition})
+  @new_definition.add
+  @word = Word.find(params.fetch('word_id').to_i())
+  @word.add_definition(@definition)
+  erb(:success)
 end
 
 
 get('/word_list/:id/definition/new') do
   @word = Word.find(params.fetch('id').to_i())
-  @new_word = Word.new({:term => @word})
   erb(:new_definition)
 end
