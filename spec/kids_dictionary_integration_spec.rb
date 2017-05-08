@@ -4,14 +4,12 @@ require "./app"
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-# example integration test
+describe('the homepage to add a word path', {:type => :feature}) do
+  it('from the homepage clicks Add New Word button and travels to the new word form') do
+    visit('/')
+    click_link('Add New Word')
+    expect(page).to have_content('Add a Word')
+  end
 
-# describe("the phrase parser path", {:type => :feature}) do
-#   it("processes the user input and returns correct message if its a palindrome") do
-#     visit("/")
-#     fill_in("phrase1", :with => "madam")
-#     fill_in("phrase2", :with => "anagram")
-#     click_button("what am i?")
-#     expect(page).to have_content("'madam' is a palindrome")
-#   end
-# end
+
+end
